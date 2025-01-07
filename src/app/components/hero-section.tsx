@@ -13,14 +13,7 @@ function HeroSection(): ReactElement {
             <span>Hello, I&apos;m </span>
             <br />
             <TypeAnimation
-              sequence={[
-                "Randy",
-                1500,
-                "Web Developer",
-                1500,
-                "Software Engineer",
-                1500,
-              ]}
+              sequence={["Randy", 1500, "Software Engineer", 1500]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
@@ -37,7 +30,7 @@ function HeroSection(): ReactElement {
         <div className="col-span-5 place-self-center mt-10 lg:mt-0">
           <div className="rounded-full bg-[#181818] relative w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
-              src="/images/image.png"
+              src="/images/avatar-cartoon.png"
               alt="Profile Picture"
               width={300}
               height={300}
