@@ -3,9 +3,10 @@ import { ReactElement, ReactNode } from "react";
 function ProjectsSection(): ReactElement {
   const projectsContent = [
     {
-      name: "Place Holder Project",
-      description: "Place holder project description to populate project card.",
-      repository: "",
+      name: "Portfolio Website",
+      description:
+        "Portfolio website serves as my online resume. Built using React.",
+      repository: "https://github.com/randylirano/portfolio-website",
       previewUrl: "",
       thumbnail: "",
     },
@@ -47,7 +48,8 @@ function ProjectCard({
   previewUrl,
 }: ProjectCardProps): ReactElement {
   return (
-    <div>
+    // Temporarily adding border for visualization
+    <div className="border-2 border-solid border-white">
       <div className="h-52 bg-orange-300 rounded-t-xl relative group">
         <div className="w-full h-full">
           <div className="h-10 w-10">GIT</div>
