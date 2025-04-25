@@ -11,13 +11,9 @@ import { Button } from "./button";
 function AboutSection(): ReactElement {
   const [activeTab, setActiveTab] = useState("skills");
   const sectionContent = {
-    introParagraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.`,
+    introParagraph: `I am a full-stack software engineer currently working with TypeScript.
+    I've accumulated other technical skills such as Java and Python through my academic journey.
+    On my free time, I try to gain additional experience by working on personal projects or practicing my DSA skills.`,
     skills: [
       "Java",
       "Python",
@@ -50,13 +46,13 @@ function AboutSection(): ReactElement {
   const tabsOption = ["skills", "educations"];
   return (
     <section>
-      <div className="flex flex-row p-8 gap-4">
+      <div className="flex flex-row gap-4">
         <div className="flex flex-col w-2/3">
           <h1 className="text-white">{"Hello, I'm Randy"}</h1>
           <p>{sectionContent.introParagraph}</p>
         </div>
         <div className="flex flex-col w-1/3">
-          <div className="flex gap-2">
+          <div className="flex gap-4">
             {tabsOption.map((option, index) => {
               return (
                 <Button

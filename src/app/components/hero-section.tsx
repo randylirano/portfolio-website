@@ -13,15 +13,15 @@ function HeroSection(): ReactElement {
             <span>Hello, I&apos;m </span>
             <br />
             <TypeAnimation
-              sequence={["Randy", 1500, "Software Engineer", 1500]}
+              sequence={["Randy", 1500, "a Software Engineer", 1500]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Full-stack software engineer | Skilled in React, TypeScript,
+            PostgreSQL | Building Scalable Tech for Insurance Industry
           </p>
           <button className="px-6 py-3 w-full sm:w-fit rounded-full my-4 bg-white hover:bg-slate-200 text-black">
             Contact Me
@@ -30,7 +30,7 @@ function HeroSection(): ReactElement {
         <div className="col-span-5 place-self-center mt-10 lg:mt-0">
           <div className="rounded-full bg-[#181818] relative w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
-              src="/images/avatar-cartoon.png"
+              src="/images/generated-image.png"
               alt="Profile Picture"
               width={300}
               height={300}
