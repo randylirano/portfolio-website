@@ -1,5 +1,5 @@
-import HeroSection from "./components/hero-section";
-import AboutSection from "./components/about-section";
+import { Hero } from "@/features";
+import About from "@/features/about";
 import ProjectsSection from "./components/projects";
 import Navbar from "./components/navbar";
 
@@ -8,11 +8,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container mx-auto px-12 py-4">
-        <HeroSection />
+        <Hero.HeroSection />
       </div>
 
       <div className="container mx-auto px-12 py-4">
-        <AboutSection />
+        <About />
       </div>
 
       <div className="container mx-auto px-12 py-4">
