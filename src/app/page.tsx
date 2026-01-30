@@ -1,22 +1,20 @@
-import { Hero } from "@/features";
-import About from "@/features/about";
-import ProjectsSection from "./components/projects";
+import { About, Hero, Project } from "@/features";
 import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col bg-gradient-to-br from-blue-950 via-slate-900 to-indigo-950">
       <Navbar />
       <div className="container mx-auto px-12 py-4">
         <Hero.HeroSection />
       </div>
 
       <div className="container mx-auto px-12 py-4">
-        <About />
+        <About.AboutSection />
       </div>
 
       <div className="container mx-auto px-12 py-4">
-        <ProjectsSection />
+        <Project />
       </div>
     </main>
   );

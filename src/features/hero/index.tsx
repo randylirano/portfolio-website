@@ -1,3 +1,4 @@
+"use client";
 import { ReactElement } from "react";
 import Image from "next/image";
 
@@ -29,7 +30,7 @@ export function HeroSection(): ReactElement {
         <div className="col-span-5 place-self-center mt-10 lg:mt-0">
           <div className="rounded-full bg-[#181818] relative w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
-              src="/images/generated-image.png"
+              src="/images/chatgpt-avatar.png"
               alt="Profile Picture"
               width={300}
               height={300}
