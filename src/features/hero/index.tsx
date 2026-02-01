@@ -1,6 +1,7 @@
 "use client";
 import { ReactElement } from "react";
 import Image from "next/image";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { TypeAnimation } from "react-type-animation";
 
@@ -23,9 +24,22 @@ export function HeroSection(): ReactElement {
             Full-stack software engineer | Skilled in React, TypeScript,
             PostgreSQL | Building Scalable Tech for Insurance Industry
           </p>
-          <button className="px-6 py-3 w-full sm:w-fit rounded-full my-4 bg-white hover:bg-slate-200 text-black">
-            Contact Me
-          </button>
+          <div className="flex flex-row gap-4 justify-center">
+            <a
+              href="https://github.com/randylirano"
+              target="_blank"
+              className="text-white hover:text-slate-500 transition-colors"
+            >
+              <FaGithub className="w-10 h-10" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/randy-lirano-66b291107/"
+              target="_blank"
+              className="text-white hover:text-slate-500 transition-colors"
+            >
+              <FaLinkedin className="w-10 h-10" />
+            </a>
+          </div>
         </div>
         <div className="col-span-5 place-self-center mt-10 lg:mt-0">
           <div className="rounded-full bg-[#181818] relative w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
