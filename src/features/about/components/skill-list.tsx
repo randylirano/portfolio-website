@@ -1,5 +1,5 @@
-import { ReactElement, useState } from "react";
-import { Button } from "@/components/button";
+import { ReactElement } from "react";
+import { SkillTag } from "@/components";
 
 interface Props {
   skills: string[];
@@ -7,9 +7,9 @@ interface Props {
 
 function SkillList({ skills }: Props): ReactElement {
   return (
-    <div className="grid grid-cols-4 gap-4 p-2">
+    <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-4">
       {skills.map((skill, index) => {
-        return <div key={index}>{skill}</div>;
+        return <SkillTag key={`skill-${index}-${skill}`} skill={skill} />;
       })}
     </div>
   );

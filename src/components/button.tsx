@@ -1,19 +1,18 @@
 import { ReactElement } from "react";
 
-export interface Props {
+interface Props {
   label: string;
   onClick: () => void;
+  isActive?: boolean;
 }
 
-export function Button({ label, onClick }: Props): ReactElement {
+export function Button({ label, onClick, isActive }: Props): ReactElement {
+  const buttonStyle = isActive
+    ? "border-b border-cyan-200"
+    : "hover:text-white text-slate-500 transition-all duration-100";
   return (
-    <button
-      className="p-2 hover:bg-[rgb(243,196,65)] hover:text-black transition-all duration-300 rounded"
-      onClick={onClick}
-    >
+    <button className={buttonStyle} onClick={onClick}>
       {label}
     </button>
   );
 }
-
-export default Button;

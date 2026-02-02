@@ -7,9 +7,7 @@ import EducationList from "./components/education-list";
 export function AboutSection(): ReactElement {
   const [activeTab, setActiveTab] = useState("skills");
   const sectionContent = {
-    introParagraph: `I am a full-stack software engineer currently working with TypeScript.
-        I've accumulated other technical skills such as Java and Python through my academic journey.
-        On my free time, I try to gain additional experience by working on personal projects or practicing my DSA skills.`,
+    introParagraph: `I am a full stack software engineer in the insurance industry, where I primarily work with TypeScript across both the frontend and backend. I build reusable, scalable UI components with React and develop robust services using NestJS, while keeping a close eye on performance and reliability through tools like Datadog. My data stack experience includes PostgreSQL for transactional workloads and Snowflake for analytics. I got my foundations in Java and Python during my academic journey, which shaped how I think about software design and problem solving. Outside of work, I enjoy building personal projects and sharpening my data structures and algorithms skills to keep my fundamentals strong and my thinking sharp.`,
     skills: [
       "Java",
       "Python",
@@ -42,31 +40,28 @@ export function AboutSection(): ReactElement {
   const tabsOption = ["skills", "educations"];
   return (
     <section id="about-section">
-      <div className="flex flex-row gap-4">
-        <div className="flex flex-col w-2/3">
-          <h1 className="text-white">{"Hello, I'm Randy"}</h1>
-          <p>{sectionContent.introParagraph}</p>
+      <h1 className="text-white my-2 text-lg font-bold">About Me</h1>
+      <div className="flex flex-col gap-4">
+        <p>{sectionContent.introParagraph}</p>
+        <div className="flex gap-4">
+          {tabsOption.map((option, index) => {
+            return (
+              <Button
+                key={index}
+                onClick={() => {
+                  setActiveTab(option);
+                }}
+                label={option.toUpperCase()}
+                isActive={activeTab === option}
+              />
+            );
+          })}
         </div>
-        <div className="flex flex-col w-1/3">
-          <div className="flex gap-4">
-            {tabsOption.map((option, index) => {
-              return (
-                <Button
-                  key={index}
-                  onClick={() => {
-                    setActiveTab(option);
-                  }}
-                  label={option.toUpperCase()}
-                />
-              );
-            })}
-          </div>
-          {activeTab === "skills" ? (
-            <SkillList skills={sectionContent.skills} />
-          ) : (
-            <EducationList educations={sectionContent.educations} />
-          )}
-        </div>
+        {activeTab === "skills" ? (
+          <SkillList skills={sectionContent.skills} />
+        ) : (
+          <EducationList educations={sectionContent.educations} />
+        )}
       </div>
     </section>
   );
