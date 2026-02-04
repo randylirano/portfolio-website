@@ -9,33 +9,13 @@ export function ProjectsSection(): ReactElement {
         "Portfolio website serves as my online resume. Built using React.",
       repository: "https://github.com/randylirano/portfolio-website",
       previewUrl: null,
-      thumbnail: null,
-    },
-    {
-      name: "Place Holder Project 2",
-      description: "Place holder project description to populate project card.",
-      repository: null,
-      previewUrl: null,
-      thumbnail: null,
-    },
-    {
-      name: "Place Holder Project 3",
-      description: "Place holder project description to populate project card.",
-      repository: null,
-      previewUrl: null,
-      thumbnail: null,
-    },
-    {
-      name: "Place Holder Project 4",
-      description: "Place holder project description to populate project card.",
-      repository: null,
-      previewUrl: null,
-      thumbnail: null,
+      thumbnail: "/images/portfolio-thumbnail.png",
+      techStacks: ["TYPESCRIPT", "REACT", "NEXT_JS"],
     },
   ];
   return (
-    <section>
-      <h1 className="text-white pb-4">{"My Projects"}</h1>
+    <section id="projects-section">
+      <h1 className="text-white my-2 text-lg font-bold">{"My Projects"}</h1>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsContent.map((project, index) => (
           <ProjectCard
@@ -43,6 +23,9 @@ export function ProjectsSection(): ReactElement {
             name={project.name}
             description={project.description}
             repository={project.repository}
+            thumbnail={project.thumbnail}
+            techStacks={project.techStacks}
+            previewUrl={project.previewUrl}
           />
         ))}
       </div>
