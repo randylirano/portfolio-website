@@ -6,7 +6,7 @@ export function ProjectsSection(): ReactElement {
     {
       name: "Portfolio Website",
       description:
-        "Portfolio website serves as my online resume. Built using React.",
+        "A website to host a list of my tech stacks and past projects",
       repository: "https://github.com/randylirano/portfolio-website",
       previewUrl: null,
       thumbnail: "/images/portfolio-thumbnail.png",
