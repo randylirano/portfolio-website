@@ -8,7 +8,7 @@ interface Props {
   description?: string | null;
   repository?: string | null;
   previewUrl?: string | null;
-  thumbnail: string;
+  thumbnail?: string | null;
   techStacks: string[];
 }
 

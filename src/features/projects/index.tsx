@@ -12,6 +12,15 @@ export function ProjectsSection(): ReactElement {
       thumbnail: "/images/portfolio-thumbnail.png",
       techStacks: ["TYPESCRIPT", "REACT", "NEXT_JS"],
     },
+    {
+      name: "RAG ChatBot",
+      description:
+        "A RAG supported chatbot. Inspired by Vercel's official tutorial.",
+      repository: "https://github.com/randylirano/RAG-Supported-ChatBot",
+      previewUrl: null,
+      thumbnail: null,
+      techStacks: ["TYPESCRIPT", "REACT", "NEXT_JS"],
+    },
   ];
   return (
     <section id="projects-section">
