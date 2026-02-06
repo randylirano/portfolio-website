@@ -1,7 +1,15 @@
 import { ReactElement } from "react";
 import Link from "next/link";
 import { FaCode, FaDesktop } from "react-icons/fa";
-import { SiTypescript, SiReact, SiNextdotjs } from "react-icons/si";
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+} from "react-icons/si";
 
 interface Props {
   name: string;
@@ -14,12 +22,20 @@ interface Props {
 
 function getTechBadge(tech: string, key: string) {
   switch (tech) {
-    case "TYPESCRIPT":
-      return <SiTypescript key={key} />;
-    case "REACT":
-      return <SiReact key={key} />;
+    case "CSS":
+      return <SiCss3 key={key} />;
+    case "HTML":
+      return <SiHtml5 key={key} />;
+    case "JAVASCRIPT":
+      return <SiJavascript key={key} />;
     case "NEXT_JS":
       return <SiNextdotjs key={key} />;
+    case "PYTHON":
+      return <SiPython key={key} />;
+    case "REACT":
+      return <SiReact key={key} />;
+    case "TYPESCRIPT":
+      return <SiTypescript key={key} />;
     default:
       return (
         <span className="text-xs" key={key}>

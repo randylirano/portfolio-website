@@ -21,6 +21,15 @@ export function ProjectsSection(): ReactElement {
       thumbnail: null,
       techStacks: ["TYPESCRIPT", "REACT", "NEXT_JS"],
     },
+    {
+      name: "Work Station",
+      description:
+        "A web application where users can store notes, todo list, images, etc. as part of their own desk space.",
+      repository: "https://github.com/randylirano/WorkStation",
+      previewUrl: null,
+      thumbnail: null,
+      techStacks: ["PYTHON", "HTML", "CSS", "JAVASCRIPT"],
+    },
   ];
   return (
     <section id="projects-section">
